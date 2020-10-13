@@ -12,6 +12,7 @@ import GameScreen from "../game-screen/game-screen";
 const App = (props) => {
   const {errorsCount, questions} = props;
   const [firstQuestion, secondQuestion] = questions;
+  const onAnswer = () => {};
 
   return (
     <BrowserRouter>
@@ -37,13 +38,13 @@ const App = (props) => {
         <Route exact path="/dev-artist">
           <ArtistQuestionScreen
             question={secondQuestion}
-            onAnswer={() => {}}
+            onAnswer={onAnswer}
           />
         </Route>
         <Route exact path="/dev-genre">
           <GenreQuestionScreen
             question={firstQuestion}
-            onAnswer={() => {}}
+            onAnswer={onAnswer}
           />
         </Route>
         <Route exact path="/game">
